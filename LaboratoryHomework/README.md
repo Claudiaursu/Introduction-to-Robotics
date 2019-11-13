@@ -1,4 +1,4 @@
-Laboratory Homeworks:
+# Laboratory Homeworks:
 
 1st Homework:
 File name: 3_potentiometers_RGB
