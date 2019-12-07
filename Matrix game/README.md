@@ -1,1 +1,6 @@
-#Matrix game: Snake Game
+# Matrix game project
+## Name of the game: Snake
+### Description:
+
+
+
