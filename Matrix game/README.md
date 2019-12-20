@@ -12,7 +12,9 @@ MAX7219 Driver - to connect all the matrix pins in a simpler way
 LED - to be lighten up when the snake eats something
 
 ### Game specifications
-The score is incremented each time the snake eats a food point. In the first level, the score is incremented by 1 each time the snake eats a food point. In the next level, the speed is increasing so it's harder and harder to eat the food points. On level 3, the last level, there are some obstacles that need to be avoided, otherwise the game is over. There are 2 possible ways to lose the game: the snake touches some obstacles, or eats himself, this means that the head of the snake meets one part of his body. The player has 3 lives.
+The score is incremented each time the snake eats a food point. In the first level, the score is incremented by 1 each time the snake eats a food point. In the next level, the speed is increasing so it's harder and harder to eat the food points.
+  *On level 3, the last level, there are some obstacles that need to be avoided, otherwise the game is over.   
+  *There are 2 possible ways to lose the game: the snake touches some obstacles, or eats himself, this means that the head of the snake meets one part of his body. The player has 3 lives.
 
 ### How to play
 The goal of this game is to make the snake happier and bigger by helping him eat as many food points as possible. A food point is a lit point, randomly displayed on the matrix and it needs to be touched by the head of the snake in order to be eaten. As long as the snake gets bigger, it will be harder for him to eat the points without his head touching one part of his body. In case this happens, the game ends. The player has 3 lives. One life is lost if the snakes dies. However, this is not the ony way the snake can die: In the last level, there are some obstacles randomly displayed on the matrix, and if the snake touches them, it dies.
