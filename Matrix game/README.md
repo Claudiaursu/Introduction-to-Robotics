@@ -17,7 +17,11 @@ On level 3, the last level, the food points are changing its positions, at every
 There is only way to lose one life: the snake eats himself, this means that the head of the snake meets one part of his body. The player has 3 lives.
 
 ### How to play
-The goal of this game is to make the snake happier and bigger by helping him eat as many food points as possible. A food point is a lit point, randomly displayed on the matrix and it needs to be touched by the head of the snake in order to be eaten. As long as the snake gets bigger, it will be harder for him to eat the points without his head touching one part of his body. In case this happens, the game ends. The player has 3 lives. One life is lost if the snakes dies.
+The goal of this game is to make the snake bigger by helping him eat as many food points as possible.There is no time limit, the player can play as long as he still has at least one life left. A food point is a lit point, randomly displayed on the matrix and it needs to be touched by the head of the snake in order to be eaten. As long as the snake gets bigger, it will be harder for him to eat the points without his head touching one part of his body. The player is allowed to move the snake through the 4 edges of the matrix, but is not allowed to let the snake eat himself, so his head must not touch the rest of his body. In case this happens, one life is lost. The player has 3 lives. There are 3 levels:<br/>
+Level 1: the snake moves naturally, without speed<br/>
+Level 2: the speed increases<br/>
+Level 3: the speed increases and the food is changing its position every 2 seconds
+
 
 ### The lcd menu
 The lcd screen will display a game menu, with 3 available options that can be selected: Play, Settings, Highscore and Info.
