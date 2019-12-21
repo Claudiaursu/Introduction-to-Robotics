@@ -2,6 +2,8 @@
 ## Name of the game: Snake
 ## Description
 The main purpose of the game is to make the snake eat as many food points as possible, represented by lighting pixels on the matrix. The snake can eat only one food point at the time, and can't go further without eating the current one. 
+![Test Image 1](snakeGamePhoto.png)
+
 ## Tehnical features
 ### Hardware components
 For realizing this project, I have used the following hardware components:<br/>
