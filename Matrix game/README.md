@@ -22,5 +22,6 @@ Level 1: the snake moves naturally, without speed<br/>
 Level 2: the speed increases<br/>
 Level 3: the speed increases and the food is changing its position every 2 seconds<br/>
 The score gets higher everytime the snake eats a food point, this being the only way the player can increase the score. If the snake doesn't eat the current food point, the score won't increase. Depending on which level is the player curerntly playing, one food point can bring more or less points (a food point brings some points when eaten at level 1, but eaten on level 2 brings more points, and evem more when eaten on level 3).<br/>
+To start the game without changing anything in the settings, the player just needs to click "Play" on the lcd menu. If he wants to change the starting level, then he should go in the settings, press on the setStartingLevel option and then change the level.
 ## Photo with the assembled hardware:
 ![Test Image 1](SnakeGamePhoto2.png)
