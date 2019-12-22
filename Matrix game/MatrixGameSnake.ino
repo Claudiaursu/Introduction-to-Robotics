@@ -65,7 +65,8 @@ struct Coordinate {
   int y;
 };
 
-LinkedList <Coordinate> foodAvailablePositions; // in this structure we save all the available positions for the food to be placed( without the body of the snake at that time)
+/* in this structure we save all the available positions for the food to be placed( without the body of the snake at that time) */
+LinkedList <Coordinate> foodAvailablePositions; 
 
 void setup() {
  lc.shutdown(0,false); //first driver turned on all the time
@@ -137,7 +138,8 @@ void placeFood(int snakeToMove[64][2]) {
   auxCoord.x = snakeToMove[i][0];
   auxCoord.y = snakeToMove[i][1];
 
-// eliminate the positions of the body points, so that there would be no chance for the new food point to be placed on the body of the snake
+/* eliminate the positions of the body points, so that there would be no chance for the new food point to be placed 
+  on the body of the snake */
   for(int j = 0; j < foodAvailablePositions.GetSize(); j++) {
     if(auxCoord.x == foodAvailablePositions.GetAt(j).x  && auxCoord.y == foodAvailablePositions.GetAt(j).y) {
       foodAvailablePositions.RemoveAt(j);
@@ -152,7 +154,9 @@ void placeFood(int snakeToMove[64][2]) {
       break;
     }
   }
- int randIndex = random(0,foodAvailablePositions.GetSize()); // generate a random index in the structure of available positions for the food
+  
+ /* generate a random index in the structure of available positions for the food */
+ int randIndex = random(0,foodAvailablePositions.GetSize()); 
  Coordinate coordFinal; // an auxiliary structure for the final position of the food
  coordFinal = foodAvailablePositions.GetAt(randIndex);
  foodX=coordFinal.x;
@@ -212,7 +216,8 @@ void lightLed(int lightTime) {
    digitalWrite(pinLed,ledState); 
 }
 
-// this function checks the movement of the snake, covering all the cases when a snake could eat a food point (when comming from North, East, West, or South). It also updates the value of the score and level
+/* this function checks the movement of the snake, covering all the cases when a snake could eat a food point (when comming
+from North, East, West, or South). It also updates the value of the score and level */
 void playGame() {
    if(level == 3 && millis() - lastPlacedFoodMillis > 2000) {
    lastPlacedFoodMillis = millis();   
@@ -613,8 +618,12 @@ void settingsMenu(){
 
   else if (currentOptionSettings == 'b') {
     screenToShow = 'm';
-    settingsScreenToShow = 'x'; // the next time we enter the menu we should not have a screen that maches something in the menu, as default display, we let the player chosse again
-    currentOptionSettings = 'l'; //the next time we enter this menu, the cursor will stay on the aboutGame option, not on the last option(back)
+    settingsScreenToShow = 'x'; 
+    /* the next time we enter the menu we should not have a screen that maches something 
+    in the menu, as default display, we let the player chosse again */
+    currentOptionSettings = 'l'; 
+    /*the next time we enter this menu, the cursor will stay on the aboutGame 
+    option, not on the last option(back) */
   }
   else if (currentOptionSettings == 'c') {
     settingsScreenToShow = 'c';
@@ -652,7 +661,8 @@ void pressAgain() {
   }
 }
 
-// this function allows the player to play again, reseting all the relevant values(number of lives, score, snake length) to their initial value, and it also sets the speed corresponding to the chosen level
+/* this function allows the player to play again, reseting all the relevant values(number of lives, 
+score, snake length) to their initial value, and it also sets the speed corresponding to the chosen level */
 void resetForNewGame(){
   foodX = 5;
   foodY = 2;
@@ -688,7 +698,7 @@ void resetForNewGame(){
   lc.setLed(0,foodX, foodY,true);
 }
 
-// a function to show the main menu options, and based on the joystick moves, to call the function for showing the cursor
+/* a function to show the main menu options, and based on the joystick moves, to call the function for showing the cursor */
 void mainMenuScreen() {
   lcd.setCursor(1,0);
   lcd.print("Play");
@@ -860,7 +870,7 @@ void displaySettings(){
       }
   }
   
-// this function lets the player press again the SW button and he gets back to the previous menu, the settings menu
+/* this function lets the player press again the SW button and he gets back to the previous menu, the settings menu */
 void pressAgainForSettings() {
     valSW = digitalRead(joySW);
   if (valSW == LOW && !SWPressed) {
@@ -874,7 +884,7 @@ void pressAgainForSettings() {
   }
 }
 
-// this function lets the player press again the SW button and he gets back to the previous menu, the info menu
+/* this function lets the player press again the SW button and he gets back to the previous menu, the info menu */
 void pressAgainForInfo() {
     valSW = digitalRead(joySW);
     if (valSW == LOW && !SWPressed) {
