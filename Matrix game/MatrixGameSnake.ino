@@ -82,7 +82,7 @@ void setup() {
   pinMode(joySW,INPUT_PULLUP);
 }
 
-// this is the logo of the game, showed when the player goes through the lcd menu
+/* this is the logo of the game, showed when the player goes through the lcd menu */
 int notPlayingImage[8][8] = {
   {0,0,0,0,0,0,0,0},
   {0,0,0,0,0,0,0,0},
@@ -94,7 +94,7 @@ int notPlayingImage[8][8] = {
   {0,0,0,0,0,0,0,0}
 };
 
-// this image will show everytime 1 life is lost
+/* this image will show everytime 1 life is lost */
 int lifeLossImage[8][8] = {
   {1,0,0,0,0,0,1,1},
   {1,1,0,0,0,0,1,1},
@@ -133,7 +133,7 @@ void placeFood(int snakeToMove[64][2]) {
   }
  }
  for(int i = 0; i < snakeLength; i++) {
-  // in an auxiliary structure we save all the values of the body of the snake
+  /* in an auxiliary structure we save all the values of the body of the snake */
   Coordinate auxCoord;
   auxCoord.x = snakeToMove[i][0];
   auxCoord.y = snakeToMove[i][1];
@@ -147,7 +147,7 @@ void placeFood(int snakeToMove[64][2]) {
     }
   }
  }
- // eliminate the posibility of getting a random position for the new food, that would be the same as the last position
+ /* eliminate the posibility of getting a random position for the new food, that would be the same as the last position */
  for(int j = 0; j < foodAvailablePositions.GetSize(); j++) {
     if(foodX == foodAvailablePositions.GetAt(j).x  && foodY == foodAvailablePositions.GetAt(j).y) {
       foodAvailablePositions.RemoveAt(j);
@@ -482,7 +482,7 @@ void showCursor(char option) {
   }
 }
 
-// this function shows the relevant information about the game(score, number of lives, level), while the player is playing
+/* this function shows the relevant information about the game(score, number of lives, level), while the player is playing */
 void playingScreen() {
   lcd.setCursor(0,0);
   lcd.print("Score:");
@@ -648,7 +648,7 @@ void seeHighScoreScreen(int score) {
   lcd.print("Press SW-go back");
 }
 
-// this function lets the player press again the SW button and he gets back to the main menu
+/* this function lets the player press again the SW button and he gets back to the main menu */
 void pressAgain() {
   valSW = digitalRead(joySW);
   if (valSW == LOW && !SWPressed) {
