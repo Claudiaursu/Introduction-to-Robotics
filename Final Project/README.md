@@ -13,3 +13,4 @@ Arduino speaker <br/>
 BC547 transistor <br/>
 Wires <br/>
 Link to BOM (Bill of Materials): https://docs.google.com/spreadsheets/d/1Htry010sDG5Vxl1XxuDkIDsEU6a6pIBbHVVmY9l-o_E/edit#gid=1570406568
+### Hardware
